@@ -1,13 +1,17 @@
 import React from "react";
-import Header from "../components/Header";
-import Main from "../components/Main";
+import Hero from "../components/Hero";
+import Hightlights from "../components/Hightlights";
+import Testimonials from "../components/Testimonials";
+import AboutSection from "../components/AboutSection";
 
 const Home = () => {
   return (
-    <>
-      <Header />
-      <Main />
-    </>
+    <main className="homepage__container">
+      <Hero />
+      <Hightlights />
+      <Testimonials />
+      <AboutSection />
+    </main>
   );
 };
 

@@ -1,32 +1,27 @@
 import React from "react";
-import { MdDeliveryDining } from "react-icons/md";
-import "./Card.css";
+import fastDelivery from "../assets/fastdelivery.png";
 
-const Card = ({ image, title, price, description }) => {
+const Card = (props) => {
+  const { name, price, description, imgUrl } = props;
+
   return (
     <div className="card">
-      <img width="300px" src={image} alt="greek salad" />
-      <div className="dish-info">
-        <div className="title">
-          <h3>{title}</h3>
-          <p className="price">${price}</p>
+      <div
+        className="card__image"
+        style={{ backgroundImage: `url(${imgUrl})` }}
+      ></div>
+      <div className="card__text">
+        <div className="card__text__heading">
+          <h3>{name}</h3>
+          <span>{price}</span>
         </div>
-        <p>{description}</p>
-        <span
-          role="button"
-          aria-label="On Click"
-          className="specials-order-btn"
-        >
-          Order a delivery
-          <MdDeliveryDining
-            size={30}
-            style={{
-              color: "#333",
-              marginLeft: "15px",
-              marginBottom: "-10px",
-            }}
-          />
-        </span>
+        <div className="card__text__description">
+          <p>{description}</p>
+        </div>
+        <div className="card__text__footer">
+          <span>Order for delivery</span>
+          <img src={fastDelivery} alt="delivery_icon" />
+        </div>
       </div>
     </div>
   );

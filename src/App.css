@@ -1,50 +1,1067 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap");
+
+* {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-  width: 100%;
+/* NAVBAR  */
+
+.header {
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__container {
+  width: 75%;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo__container {
   height: 100%;
 }
 
-#root {
+.header__nav__logo {
+  height: 4rem;
+}
+
+.menu__icon {
+  width: 2rem;
+  display: none;
+}
+
+.header__nav {
+  width: 90%;
+  max-width: 50rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(0);
+}
+
+.header__nav__link {
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  margin-left: 3rem;
+  transition: all 0.3s ease;
+}
+
+.header__nav__link:hover {
+  color: #ee9972;
+}
+
+/* HOMEPAGE */
+
+.homepage__container {
+  width: 100%;
+}
+
+/* HERO SECTION */
+
+.hero {
+  width: 100%;
+  height: 25rem;
+  background-color: #495e57;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__container {
+  width: 75%;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__text {
+  width: 30%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10rem;
-  padding-top: 10rem;
+.hero__text h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 4.5rem;
+  font-weight: normal;
+  color: #f4ce14;
+  line-height: 0.5;
 }
 
-main button {
-  max-height: smaller;
+.hero__text h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
-section {
-  width: 100%;
-  padding: 0 15%;
+.hero__text p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
-h1 {
-  font-size: 4rem;
-}
-
-button {
-  padding: 15px 30px;
-  font-size: 16pt;
-  font-weight: 600;
+.hero__text button {
+  padding: 1rem 2rem;
+  width: fit-content;
+  color: #000;
   background-color: #f4ce14;
-  color: #333;
-  border-radius: 20px;
+  border-radius: 1.5rem;
   border: none;
+  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero__text button:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.hero__img {
+  width: 40%;
+}
+
+.hero__img div {
+  padding-bottom: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/restaurantfood.jpg");
+  border-radius: 1rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  bottom: -2rem;
+}
+
+/* HIGHTLIGHTS */
+
+.hightlights {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.hightlight__container {
+  width: 75%;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hightlights_text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hightlights_text h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.hightlights_text button {
+  padding: 1rem 2rem;
+  width: fit-content;
+  color: #000;
+  background-color: #f4ce14;
+  border-radius: 1.5rem;
+  border: none;
+  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hightlights_text button:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.hightlights_cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* CARDS */
+
+.card {
+  width: 30%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #c2c4c38c;
+  position: relative;
+  filter: brightness(0.8);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  filter: brightness(1);
+}
+
+.card__image {
+  padding-bottom: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.card__text {
+  padding: 1rem;
+}
+
+.card__text__heading {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card__text__heading span {
+  color: #ee9972;
+}
+
+.card__text__description {
+  margin: 1rem auto 3rem;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.card__text__footer {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.card__text__footer span {
+  padding-right: 0.5rem;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card__text__footer img {
+  width: 1.5rem;
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+  width: 100%;
+  height: 25rem;
+  background-color: #495e57;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials__container {
+  max-width: 1080px;
+  width: 75%;
+  height: 70%;
+  min-height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* TESTIMONIAL CARD */
+
+.testimonial {
+  width: 30%;
+  background-color: rgba(229, 236, 243, 0.7);
+  padding: 2rem 1rem 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  background-color: rgba(229, 236, 243, 1);
+}
+
+.testimonial__rating {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial__rating img {
+  width: 1rem;
+}
+
+.testimonial__text {
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  text-align: center;
+  height: 50%;
+}
+
+.testimonial hr {
+  width: 100%;
+  height: 0.05rem;
+  background-color: rgba(80, 77, 77, 0.4);
+  margin: 0.5rem 0;
+  border: none;
+}
+
+.testimonial__user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial__user img {
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.testimonial__user span {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* ABOUT */
+
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.about__container {
+  max-width: 1080px;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__container__text {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__container__text h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  line-height: 0.5;
+}
+
+.about__container__text h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.about__container__text p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.about__container__img {
+  width: 40%;
+  position: relative;
+}
+
+.about__container__img img {
+  width: 70%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 2rem;
+}
+
+.about__container__img .front_image {
+  top: 1rem;
+  left: -1rem;
+  z-index: 100;
+}
+
+.about__container__img .back_image {
+  top: -2rem;
+  right: 0;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #495e57;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  max-width: 1080px;
+  color: #fff;
+}
+
+.footer__container__logo,
+.footer__container__nav,
+.footer__container__contact,
+.footer__container__social {
+  width: 25%;
+}
+
+.footer__container__nav h3,
+.footer__container__contact h3,
+.footer__container__social h3 {
+  text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.footer__nav ul {
+  list-style: none;
+}
+
+.footer__nav ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer__nav__link {
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.footer__nav__link:hover {
+  color: #f4ce14;
+}
+
+.footer__container__contact {
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
+  font-weight: normal;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+}
+
+.footer__container__contact p {
+  margin-bottom: 0.5rem;
+}
+
+.footer__container__social .footer__container__social-icon {
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.footer__container__social .footer__container__social-icon:hover {
+  color: #f4ce14;
+}
+
+/* About Page */
+
+h2.about__heading,
+h2.menu__heading,
+h2.reserve__heading,
+h2.order__heading {
+  text-align: center;
+  padding: 3rem 0;
+  background-color: #495e57;
+  color: #fff;
+  font-family: "Markazi Text", serif;
+  font-size: 4.5rem;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+}
+
+/* Menu Page */
+
+.menu__container {
+  width: 75%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5rem;
+}
+
+.menu__container img {
+  width: 100%;
+}
+
+/* Reserve Page */
+
+.reserve {
+  width: 100%;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+.reserve__container {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  max-width: 1080px;
+}
+
+.reserve_form {
+  width: 45%;
+  display: flex;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form_block input,
+.form_block select {
+  width: 48%;
+  margin-bottom: 1rem;
+}
+
+form > input {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-style: italic;
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.form__checkbox input {
+  margin-right: 1rem;
+}
+
+form input:not([type="checkbox"]),
+form select {
+  height: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+form input,
+select,
+option {
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #333;
+}
+
+form input::placeholder {
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #777777;
+}
+
+form button {
+  width: 80%;
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  color: #000;
+  background-color: #f4ce14;
+  border-radius: 1.5rem;
+  border: none;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.reserve__image {
+  width: 45%;
+}
+
+.reserve__image img {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.booking__confirmation {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Markazi Text", serif;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+}
+
+.booking__confirmation h2 {
+  color: #495e57;
+  font-size: 4.5rem;
+}
+
+.booking__confirmation h3 {
+  font-size: 3rem;
+  color: #000;
+}
+
+.booking__confirmation img {
+  width: 2rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.booking__confirmation.hidden {
+  display: none;
+}
+
+/* ORDER PAGE */
+
+.order__container {
+  width: 50%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.order__row {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.order__img img {
+  border-radius: 1rem;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+.order__price {
+  color: #ee9972;
+}
+
+.order__total {
+  padding: 1rem 0;
+  text-align: end;
+  font-size: 2rem;
+}
+
+.order__container button {
+  width: 60%;
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  color: #000;
+  background-color: #f4ce14;
+  border-radius: 1.5rem;
+  border: none;
+  font-family: "Karla", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.order__container button:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* NAVBAR  */
+
+  .header__container {
+    width: 90%;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .header__logo__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu__icon {
+    display: block;
+  }
+
+  .menu__icon.hidden {
+    display: none;
+  }
+
+  .header__nav {
+    width: 90%;
+    height: 100%;
+  }
+
+  .menu__icon__container {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .header__nav ul {
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    flex-direction: column;
+    z-index: 100;
+    transform: translateX(0);
+    transition: all 0.5s ease;
+  }
+
+  .header__nav ul.hide {
+    transform: translateX(100%);
+  }
+
+  .header__nav ul.show {
+    transform: translateX(0);
+  }
+
+  .header__nav ul li {
+    padding: 1rem 1rem;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .header__nav__link {
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+
+  /* HOMEPAGE */
+
+  .homepage__container {
+    width: 100%;
+  }
+
+  /* HERO SECTION */
+
+  .hero {
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  .hero__container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__text {
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero__text h1 {
+    font-family: "Markazi Text", serif;
+    font-size: 4.5rem;
+    font-weight: normal;
+    color: #f4ce14;
+    line-height: 0.5;
+  }
+
+  .hero__text h2 {
+    font-family: "Markazi Text", serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .hero__text p {
+    text-align: center;
+  }
+
+  .hero__text button {
+    padding: 1rem 2rem;
+    width: fit-content;
+    color: #000;
+    background-color: #f4ce14;
+    border-radius: 1.5rem;
+    border: none;
+    font-family: "Karla", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .hero__text button:hover {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
+  }
+
+  .hero__img {
+    width: 100%;
+  }
+
+  /* HIGHTLIGHTS */
+
+  .hightlight__container {
+    width: 90%;
+  }
+
+  .hightlights_text {
+    flex-direction: column;
+  }
+
+  .hightlights_cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* CARDS */
+
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* TESTIMONIALS */
+
+  .testimonials {
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  .testimonials__container {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  /* TESTIMONIAL CARD */
+
+  .testimonial {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  /* ABOUT */
+
+  .about__container {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .about__container__text {
+    width: 100%;
+  }
+
+  .about__container__img {
+    width: 100%;
+  }
+
+  .about__container__img img {
+    position: static;
+    width: 100%;
+  }
+
+  /* FOOTER */
+
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+  }
+
+  .footer__container__logo,
+  .footer__container__nav,
+  .footer__container__contact,
+  .footer__container__social {
+    width: 100%;
+  }
+
+  /* About Page */
+
+  h2.about__heading,
+  h2.menu__heading,
+  h2.reserve__heading,
+  h2.order__heading {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #495e57;
+    color: #fff;
+    font-family: "Markazi Text", serif;
+    font-size: 4.5rem;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+  }
+
+  /* Menu Page */
+
+  .menu__container {
+    width: 100%;
+    padding: 2rem 0.5rem;
+  }
+
+  .menu__container img {
+    width: 100%;
+  }
+
+  /* Reserve Page */
+
+  .reserve__container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .reserve_form {
+    width: 100%;
+  }
+
+  .reserve__image {
+    width: 100%;
+  }
+
+  .booking__confirmation {
+    text-align: center;
+  }
+
+  /* ORDER PAGE */
+
+  .order__container {
+    width: 100%;
+  }
 }

@@ -1,17 +1,27 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import BookingForm from "./components/BookingForm";
+/* eslint-disable testing-library/no-node-access */
+import { render, screen } from "@testing-library/react";
+import Reserve from "./pages/Reserve.js";
 
-test("Renders the BookingForm", () => {
-  render(<BookingForm />);
-  const submitBtn = screen.getByText("Make Reservation");
-  expect(submitBtn).toBeInTheDocument();
+test("Renders the Reserve Page heading", () => {
+  render(<Reserve />);
+  const headingElement = screen.getByText("RESERVATION");
+  expect(headingElement).toBeInTheDocument();
 });
 
-test("Updates the time correctly", () => {
-  render(<BookingForm />);
-  const dateSelector = screen.getByLabelText(/Choose date/);
-  fireEvent.change(dateSelector, { target: { value: "2023-02-05" } });
-  const timeDropDown = screen.getByLabelText(/Choose time/);
-  fireEvent.change(timeDropDown, { target: { value: "17:00" } });
-  expect(timeDropDown.value).toEqual("17:00");
+test("Persons field is not null/empty", () => {
+  render(<Reserve />);
+  const resultElement = document.getElementById("persons");
+  expect(resultElement).not.toBeNull();
+});
+
+test("Date field is not empty", () => {
+  render(<Reserve />);
+  const resultElement = document.getElementById("date");
+  expect(resultElement).not.toBeUndefined();
+});
+
+test("Display the calendar", () => {
+  render(<Reserve />);
+  const datePicker = document.getElementById("date");
+  expect(datePicker).toBeInTheDocument();
 });

@@ -1,39 +1,30 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./layouts/NavBar";
-import Footer from "./layouts/Footer";
-import Home from "./pages/Home";
-import Booking from "./pages/Booking";
-import BookingConfirmation from "./pages/BookingConfirmation";
-import { useFormContext } from "./store/FormContext";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
+import Header from "./components/Header";
+// import Login from './components/Login';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Menu from "./pages/Menu";
+import Order from "./pages/Order";
+import Reserve from "./pages/Reserve";
+import Footer from "./components/Footer";
+
 function App() {
-  const { form } = useFormContext();
-
-  const formProps = {
-    name: form.name,
-    date: form.date,
-    time: form.time,
-    guests: form.numberOfGuests,
-    occasion: form.occasion,
-    table: form.tablePreference,
-    request: form.message,
-  };
-
   return (
-    <BrowserRouter>
-      <NavBar />
+    <>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route
-          path="/booking-confirmation"
-          element={<BookingConfirmation {...formProps} />}
-        />
+        <Route path="/about" element={<About />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/reserve" element={<Reserve />} />
+        <Route path="/order" element={<Order />} />
       </Routes>
+      {/* <Login /> */}
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 
